@@ -138,7 +138,15 @@ $education = [
           <div class="w3-container">
             <h5 class="w3-opacity"><b><?php echo $works[$i]["name"]?> </b></h5>
             <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>
-            <?php echo $works[$i]["dateStart"]?> - <?php echo $works[$i]["dateEnd"]?></h6>
+            <?php echo $works[$i]["dateStart"];?> - 
+            <?php if ($i == 0): ?>
+            <span class="w3-tag w3-teal w3-round">
+                <?php echo $works[$i]["dateEnd"];?>
+                </span>
+                <?php else: ?>
+                <?php echo $works[$i]["dateEnd"];?>
+                <?php endif;?>
+            </h6>
             <p><?php echo $works[$i]["description"]?></p>
             <hr>
           </div>
@@ -153,7 +161,15 @@ $education = [
           <div class="w3-container">
             <h5 class="w3-opacity"><b><?php echo $education[$i]["name"]?></b></h5>
             <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>
-            <?php echo $education[$i]["dateStart"]?> - <?php echo $education[$i]["dateEnd"]?></h6>
+            <?php echo $education[$i]["dateStart"]?> - 
+            <?php if ($i == 0): ?>
+            <span class="w3-tag w3-teal w3-round">
+                <?php echo $works[$i]["dateEnd"];?>
+                </span>
+                <?php else: ?>
+                <?php echo $works[$i]["dateEnd"];?>
+                <?php endif;?>
+               </h6>
             <p><?php echo $education[$i]["specialization"]?></p>
             <hr>
           </div>
